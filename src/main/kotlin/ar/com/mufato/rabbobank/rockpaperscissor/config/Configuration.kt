@@ -1,30 +1,30 @@
 package ar.com.mufato.rabbobank.rockpaperscissor.config
 
-import ar.com.mufato.rabbobank.rockpaperscissor.core.services.ComputerHandServiceImpl
+import ar.com.mufato.rabbobank.rockpaperscissor.core.services.RandomComputerHandService
 import ar.com.mufato.rabbobank.rockpaperscissor.core.actions.PlayHandAgainstComputer
 import ar.com.mufato.rabbobank.rockpaperscissor.core.services.ComputerHandService
 import ar.com.mufato.rabbobank.rockpaperscissor.delivery.rest.PlayHandAgainstComputerRest
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
+@Suppress("unused") //used by spring
 @Configuration
 class Configuration {
 
     // ------------ Core   --------------
     @Bean
-    public fun computerHandServiceImpl(): ComputerHandService = ComputerHandServiceImpl()
+    fun computerHandServiceImpl(): ComputerHandService = RandomComputerHandService()
 
     @Bean
-    public fun playHandAgainstComputer(computerHandService: ComputerHandService): PlayHandAgainstComputer {
+    fun playHandAgainstComputer(computerHandService: ComputerHandService): PlayHandAgainstComputer {
         return PlayHandAgainstComputer(
             computerHandService
         )
     }
 
-
     // ------------ Delivery   --------------
     @Bean
-    public fun playHandAgainstComputerRest(playHandAgainstComputer : PlayHandAgainstComputer): PlayHandAgainstComputerRest {
+    fun playHandAgainstComputerRest(playHandAgainstComputer : PlayHandAgainstComputer): PlayHandAgainstComputerRest {
         return PlayHandAgainstComputerRest(playHandAgainstComputer)
     }
 

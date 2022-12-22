@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
 
-
+@Suppress("SameParameterValue") //suppress warning in favor or readability
 class PlayHandAgainstComputerTest{
     private lateinit var result: GameResult
     private val computerHandService: ComputerHandService = mock()
@@ -25,7 +25,7 @@ class PlayHandAgainstComputerTest{
     }
 
     private fun givenAComputerHandReturning(handShape: HandShape) {
-        whenever(computerHandService.obtainRandomHand()).thenReturn(handShape)
+        whenever(computerHandService.obtainHand()).thenReturn(handShape)
     }
 
     private fun whenUserPlaysWith(handShape: HandShape) {

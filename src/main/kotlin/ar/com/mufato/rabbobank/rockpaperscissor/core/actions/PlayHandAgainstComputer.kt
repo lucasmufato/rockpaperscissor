@@ -8,7 +8,7 @@ class PlayHandAgainstComputer(
     private val computerHandService: ComputerHandService
 ) {
     operator fun invoke(playerShape: HandShape): GameResult {
-        val computerShape = computerHandService.obtainRandomHand()
+        val computerShape = computerHandService.obtainHand()
         return GameResult(playerShape.contest(computerShape), computerShape)
     }
 }

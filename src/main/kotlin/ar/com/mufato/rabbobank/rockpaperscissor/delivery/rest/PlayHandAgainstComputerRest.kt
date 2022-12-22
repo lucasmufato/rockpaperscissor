@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
+@Suppress("unused")
 class PlayHandAgainstComputerRest(private val playHand: PlayHandAgainstComputer) {
 
     @CrossOrigin

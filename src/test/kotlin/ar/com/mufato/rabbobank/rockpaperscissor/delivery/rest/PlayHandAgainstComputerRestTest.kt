@@ -51,7 +51,7 @@ class PlayHandAgainstComputerRestTest{
     }
 
     fun givenAComputerPlayingA(handShape: HandShape) {
-        Mockito.`when`(computerHandService.obtainRandomHand()).thenReturn(handShape)
+        Mockito.`when`(computerHandService.obtainHand()).thenReturn(handShape)
     }
 
     private fun whenUserPlaysHandWith(jsonContent: String) {
