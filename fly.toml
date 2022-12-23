@@ -1,6 +1,6 @@
 # fly.toml file generated for rpsb on 2022-12-22T17:09:33+01:00
 
-app = "rps-back"
+app = "rpsb"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
