@@ -19,6 +19,6 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v3.2.0
       with:
-        tags: mufatolucas/rockpaperscissor:latest
+        tags: mufatolucas/rps-back:latest
         context: .
         push: true

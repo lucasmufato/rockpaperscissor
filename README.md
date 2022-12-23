@@ -33,8 +33,8 @@ Two options:
 - Just Run `RockPaperScissorApplication.kt`
 
 - With docker:
-  - build image running: `docker build -t rockpaperscissor . `
-  - once build run: `docker run -p 8080:8080 rockpaperscissor:latest`
+  - build image running: `docker build -t rps-back . `
+  - once build run: `docker run -p 8080:8080 rps-back:latest`
 
 ## Documentation
 
